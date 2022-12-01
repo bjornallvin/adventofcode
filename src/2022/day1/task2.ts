@@ -1,4 +1,4 @@
-import { readLinesFromFile, readStringFromFile } from "../utils";
+import { readLinesFromFile, readStringFromFile } from "../../utils";
 import * as fs from "fs";
 var prompt = require("prompt-sync")();
 
