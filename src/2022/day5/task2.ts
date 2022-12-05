@@ -38,8 +38,12 @@ for (const move of moves.split("\n")) {
 
   console.log("move", amount, from, to);
 
+  let tempStack: string[] = [];
   for (let i = 0; i < parseInt(amount); i++) {
-    moveFromTo(parseInt(from), parseInt(to));
+    tempStack.push(stacks[parseInt(from) - 1].pop() || "");
+  }
+  while (tempStack.length > 0) {
+    stacks[parseInt(to) - 1].push(tempStack.pop() || "");
   }
 }
 
